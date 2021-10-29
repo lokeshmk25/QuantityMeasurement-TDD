@@ -3,10 +3,14 @@ package com.bridgelabz;
 import java.util.Objects;
 
 public class Yard {
-    private final int i;
+    public double i;
 
-    public Yard(int i) {
+    public Yard(double i) {
         this.i=i;
+    }
+
+    public Yard() {
+
     }
 
     @Override
