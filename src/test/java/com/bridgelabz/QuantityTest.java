@@ -68,6 +68,13 @@ public class QuantityTest {
         Inch inch2=null;
         Assertions.assertNotEquals(inch1,inch2);
     }
+
+    @Test
+    public void givenInchandInchFromSameRef_ShouldReturnTrue() {
+        Inch inch1 = new Inch(0);
+        boolean actual=inch1==inch1;
+        Assertions.assertTrue(actual);
+    }
 }
 
 
