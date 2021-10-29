@@ -102,6 +102,12 @@ public class QuantityTest {
         double comparison = equality.ftydCompaison(3);
         Assertions.assertEquals(1,comparison);
     }
+    @Test
+    public void given1feetCompareTo1YardShouldReturnNotEqual() {
+        LengtEquality equality = new LengtEquality();
+        double comparison = equality.ftydCompaison(1);
+        Assertions.assertNotEquals(1,comparison);
+    }
 }
 
 
