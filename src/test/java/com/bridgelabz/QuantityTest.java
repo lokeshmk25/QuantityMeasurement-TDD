@@ -42,17 +42,31 @@ public class QuantityTest {
 
 
     @Test
-    void given0inchand0inchShouldReturnEqual() {
+    public void given0inchand0inchShouldReturnEqual() {
         Inch inch1 = new Inch(0);
         Inch inch2 = new Inch(0);
         Assertions.assertEquals(inch1, inch2);
     }
 
     @Test
-    void given1Feetcompareto12inch_ShouldReturnTrueWhenEquals() {
+    public void given1Feetcompareto12inch_ShouldReturnTrueWhenEquals() {
         LengtEquality equality = new LengtEquality();
         double comparison = equality.ftinComparison(1);
         Assertions.assertEquals(12, comparison);
+    }
+
+    @Test
+    public void given0inchAnd1inchShouldReturnNotEqual() {
+        Inch inch1 = new Inch(0);
+        Inch inch2 = new Inch(1);
+        Assertions.assertNotEquals(inch1,inch2);
+    }
+
+    @Test
+    public void given0inchAndNull_ShouldReturnNotEqual() {
+        Inch inch1 = new Inch(0);
+        Inch inch2=null;
+        Assertions.assertNotEquals(inch1,inch2);
     }
 }
 
