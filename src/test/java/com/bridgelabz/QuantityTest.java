@@ -116,6 +116,14 @@ public class QuantityTest {
         Assertions.assertNotEquals(1,compare);
 
     }
+
+    @Test
+    void given36inchcompareto1yardShouldReturnEqual() {
+        LengtEquality equality = new LengtEquality();
+        double comparison = equality.inydComparison(36);
+        Assertions.assertEquals(1,comparison);
+
+    }
 }
 
 
