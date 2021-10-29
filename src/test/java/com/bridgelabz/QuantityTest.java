@@ -78,20 +78,20 @@ public class QuantityTest {
 
     @Test
     public void given0Yardand0YardShouldReturnEqual() {
-        Yard yard1 = new Yard(0);
-        Yard yard2 = new Yard(0);
+        Yard yard1 = new Yard();
+        Yard yard2 = new Yard();
         Assertions.assertEquals(yard1,yard2);
     }
     @Test
     public void given0Yardand1YardShouldReturnNotEqual() {
-        Yard yard1 = new Yard(0);
-        Yard yard2 = new Yard(1);
+        Yard yard1 = new Yard();
+        Yard yard2 = new Yard();
         Assertions.assertNotEquals(yard1,yard2);
     }
 
     @Test
     public void given0YardandNullShouldReturnNotEqual() {
-        Yard yard1 = new Yard(0);
+        Yard yard1 = new Yard();
         Yard yard2=null;
         Assertions.assertNotEquals(yard1,yard2);
     }
@@ -107,6 +107,14 @@ public class QuantityTest {
         LengtEquality equality = new LengtEquality();
         double comparison = equality.ftydCompaison(1);
         Assertions.assertNotEquals(1,comparison);
+    }
+
+    @Test
+    public void given1inchCmpareto1yardShouldReturnNotEqual() {
+        LengtEquality equality = new LengtEquality();
+        double compare = equality.inydComparison(100);
+        Assertions.assertNotEquals(1,compare);
+
     }
 }
 

@@ -16,4 +16,11 @@ public class LengtEquality {
         yard.i= (feet.value/3);
         return yard.i;
     }
+
+    public double inydComparison(double in) {
+        Inch inch = new Inch(in);
+        Yard yard = new Yard();
+        yard.i=(inch.value/36);
+        return yard.i;
+    }
 }

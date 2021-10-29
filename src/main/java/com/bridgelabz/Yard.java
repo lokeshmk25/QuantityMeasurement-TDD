@@ -1,17 +1,11 @@
 package com.bridgelabz;
 
-import java.util.Objects;
-
 public class Yard {
     public double i;
 
-    public Yard(double i) {
-        this.i=i;
-    }
-
     public Yard() {
-
     }
+
 
     @Override
     public boolean equals(Object o) {

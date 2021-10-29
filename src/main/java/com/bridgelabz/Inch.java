@@ -1,11 +1,9 @@
 package com.bridgelabz;
 
-import java.util.Objects;
-
 public class Inch {
     public double value;
 
-    public Inch(int value) {
+    public Inch(double value) {
         this.value=value;
     }
 
