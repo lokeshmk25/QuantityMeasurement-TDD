@@ -32,4 +32,11 @@ public class QuantityTest {
         boolean actual=feet1==feet1;
         Assertions.assertTrue(actual);
     }
+
+    @Test
+    public void givenFeetandFeet_FromDiffType_ShouldReturnNotEqual() {
+        Feet feet1 = new Feet(1.2);
+        Feet feet2 = new Feet(1);
+        Assertions.assertNotEquals(feet1,feet2);
+    }
 }
