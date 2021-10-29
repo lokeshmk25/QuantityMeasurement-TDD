@@ -25,4 +25,11 @@ public class QuantityTest {
         Feet feet2 = null;
         Assertions.assertNotEquals(feet1,feet2);
     }
+
+    @Test
+    void givenFeetandFeet_FromSameRef_WhenEqual_ShouldReturntrue() {
+        Feet feet1 = new Feet(0.0);
+        boolean actual=feet1==feet1;
+        Assertions.assertTrue(actual);
+    }
 }
