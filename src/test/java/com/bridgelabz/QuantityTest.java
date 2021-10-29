@@ -88,6 +88,13 @@ public class QuantityTest {
         Yard yard2 = new Yard(1);
         Assertions.assertNotEquals(yard1,yard2);
     }
+
+    @Test
+    void given0YardandNullShouldReturnNotEqual() {
+        Yard yard1 = new Yard(0);
+        Yard yard2=null;
+        Assertions.assertNotEquals(yard1,yard2);
+    }
 }
 
 
