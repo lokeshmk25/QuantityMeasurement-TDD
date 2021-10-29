@@ -75,6 +75,13 @@ public class QuantityTest {
         boolean actual=inch1==inch1;
         Assertions.assertTrue(actual);
     }
+
+    @Test
+    void given0Yardand0YardShouldReturnEqual() {
+        Yard yard1 = new Yard(0);
+        Yard yard2 = new Yard(0);
+        Assertions.assertEquals(yard1,yard2);
+    }
 }
 
 
