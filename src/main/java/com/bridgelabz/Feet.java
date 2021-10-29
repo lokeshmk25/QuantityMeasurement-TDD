@@ -4,7 +4,8 @@ import java.util.Objects;
 
 public class Feet {
 
-    private final double value;
+    public double value;
+
 
     public Feet(double value) {
         this.value = value;

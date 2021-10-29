@@ -39,4 +39,11 @@ public class QuantityTest {
         Feet feet2 = new Feet(1);
         Assertions.assertNotEquals(feet1,feet2);
     }
+
+    @Test
+    void given1Feetcompareto12inch_ShouldReturnTrueWhenEquals() {
+        LengtEquality equality = new LengtEquality();
+        double comparison = equality.ftinComparison(1);
+        Assertions.assertEquals(12,comparison);
+    }
 }
