@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class Inch {
-    public double value;
+    private double value;
 
     /**
      *
@@ -9,9 +9,6 @@ public class Inch {
      */
     public Inch(double value) {
         this.value = value;
-    }
-
-    public Inch() {
     }
 
     /**

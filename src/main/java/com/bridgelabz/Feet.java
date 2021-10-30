@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class Feet {
 
-    public double value;
+    private double value;
 
     /**
      *
@@ -11,10 +11,12 @@ public class Feet {
     public Feet(double value) {
         this.value = value;
     }
-    /*
-    Chacks Equals method
-     */
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

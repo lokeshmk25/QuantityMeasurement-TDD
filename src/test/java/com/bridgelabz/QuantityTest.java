@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class QuantityTest {
 
     @Test
-    public void given0Feetand0FeetSouldReturnEqual() {
+    public void given0Feetand0Feet_SouldReturnEqual() {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
         Assertions.assertEquals(feet1, feet2);
@@ -120,10 +120,16 @@ public class QuantityTest {
     }
 
     @Test
-    void given36inchcompareto1yardShouldReturnEqual() {
+    public void given36inchcompareto1yardShouldReturnEqual() {
         LengthEquality equality = new LengthEquality();
         double comparison = equality.inydComparison(36);
         Assertions.assertEquals(1, comparison);
+    }
 
+    @Test
+    public void given1YardCompareTo36InchShouldReturnEqual() {
+        LengthEquality equality = new LengthEquality();
+        double comparison = equality.ydinComparison(1);
+        Assertions.assertEquals(36, comparison);
     }
 }

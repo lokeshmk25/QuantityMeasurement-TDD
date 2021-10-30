@@ -11,10 +11,7 @@ public class LengthEquality {
      * @return
      */
     public double ftinComparison(double ft) {
-        Inch inch = new Inch(12);
-        Feet feet = new Feet(ft);
-        feet.value = feet.value * inch.value;
-        return feet.value;
+        return ft*12;
     }
 
     /**
@@ -23,10 +20,7 @@ public class LengthEquality {
      * @return
      */
     public double ftydCompaison(double ft) {
-        Feet feet = new Feet(ft);
-        Yard yard = new Yard(0.0);
-        yard.i = (feet.value / 3);
-        return yard.i;
+        return  ft/ 3;
     }
 
     /**
@@ -35,10 +29,15 @@ public class LengthEquality {
      * @return
      */
     public double inydComparison(double in) {
-        Inch inch = new Inch(in);
-        Yard yard = new Yard(0.0);
-        yard.i = (inch.value / 36);
-        return yard.i;
+        return in/36;
     }
 
+    /**
+     *
+     * @param yd
+     * @return
+     */
+    public double ydinComparison(double yd) {
+        return yd*36;
+    }
 }

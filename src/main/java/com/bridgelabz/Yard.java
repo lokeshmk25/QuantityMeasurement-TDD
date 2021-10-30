@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class Yard {
-    public double i;
+    private double i;
 
     /**
      *
