@@ -132,4 +132,11 @@ public class QuantityTest {
         double comparison = equality.ydinComparison(1);
         Assertions.assertEquals(36, comparison);
     }
+
+    @Test
+    public void given1YardCompareTo3FeetShouldReturnEqual() {
+        LengthEquality equality = new LengthEquality();
+        double comparison = equality.ydftComparison(1);
+        Assertions.assertEquals(3,comparison);
+    }
 }
