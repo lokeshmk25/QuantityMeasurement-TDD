@@ -153,4 +153,11 @@ public class QuantityTest {
         Centimeter cm2 = new Centimeter(1.0);
         Assertions.assertNotEquals(cm1,cm2);
     }
+    @Test
+    public void given0cmAndNullShouldReturnNotEqual() {
+        Centimeter cm1 = new Centimeter(0.0);
+        Centimeter cm2 = null;
+        Assertions.assertNotEquals(cm1,cm2);
+    }
+
 }
