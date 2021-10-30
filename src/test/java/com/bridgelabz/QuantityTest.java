@@ -160,4 +160,10 @@ public class QuantityTest {
         Assertions.assertNotEquals(cm1,cm2);
     }
 
+    @Test
+    void given2InchComapreTo5CmShould_ReturnEqual() {
+        LengthEquality equality = new LengthEquality();
+        double comparison = equality.incmComparison(2);
+        Assertions.assertEquals(5,comparison);
+    }
 }

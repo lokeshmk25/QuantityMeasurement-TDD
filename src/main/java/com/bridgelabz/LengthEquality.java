@@ -49,4 +49,8 @@ public class LengthEquality {
     public double ydftComparison(double yd) {
         return yd*3;
     }
+
+    public double incmComparison(double in) {
+        return in*2.5;
+    }
 }
