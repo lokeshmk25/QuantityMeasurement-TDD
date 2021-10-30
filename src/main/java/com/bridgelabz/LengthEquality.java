@@ -41,6 +41,11 @@ public class LengthEquality {
         return yd*36;
     }
 
+    /**
+     *
+     * @param yd
+     * @return
+     */
     public double ydftComparison(double yd) {
         return yd*3;
     }

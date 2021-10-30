@@ -139,4 +139,11 @@ public class QuantityTest {
         double comparison = equality.ydftComparison(1);
         Assertions.assertEquals(3,comparison);
     }
+
+    @Test
+    public void given0cmAnd0cmShouldReturnEqual() {
+        Centimeter cm1 = new Centimeter(0.0);
+        Centimeter cm2 = new Centimeter(0.0);
+        Assertions.assertEquals(cm1,cm2);
+    }
 }
