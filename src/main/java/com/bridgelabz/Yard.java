@@ -3,15 +3,26 @@ package com.bridgelabz;
 public class Yard {
     public double i;
 
-    public Yard() {
+    /**
+     *
+     * @param i
+     */
+    public Yard(double i) {
+        this.i = i;
     }
 
-
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Yard)) return false;
         Yard yard = (Yard) o;
-        return i == yard.i;
+        return Double.compare(yard.i, i) == 0;
     }
+
+
 }

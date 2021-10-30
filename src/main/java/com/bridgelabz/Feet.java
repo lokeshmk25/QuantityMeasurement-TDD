@@ -1,15 +1,19 @@
 package com.bridgelabz;
 
-import java.util.Objects;
-
 public class Feet {
 
     public double value;
 
-
+    /**
+     *
+     * @param value
+     */
     public Feet(double value) {
         this.value = value;
     }
+    /*
+    Chacks Equals method
+     */
 
     @Override
     public boolean equals(Object o) {
@@ -18,7 +22,6 @@ public class Feet {
         Feet feet = (Feet) o;
         return Double.compare(feet.value, value) == 0;
     }
-
 }
 
 

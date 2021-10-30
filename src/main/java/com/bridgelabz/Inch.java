@@ -3,11 +3,22 @@ package com.bridgelabz;
 public class Inch {
     public double value;
 
+    /**
+     *
+     * @param value
+     */
     public Inch(double value) {
-        this.value=value;
+        this.value = value;
     }
 
+    public Inch() {
+    }
 
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
