@@ -6,51 +6,44 @@ This class used for Unit conversion
 
 public class LengthEquality {
     /**
-     *
-     * @param ft
-     * @return
+     * @param feet Compares feet to inch
      */
-    public double ftinComparison(double ft) {
-        return ft*12;
+    public double feetinchComparison(double feet) {
+        return feet * 12;
     }
 
     /**
-     *
-     * @param ft
-     * @return
+     * @param feet compares feet to yard
      */
-    public double ftydCompaison(double ft) {
-        return  ft/ 3;
+    public double feetyardCompaison(double feet) {
+        return feet / 3;
     }
 
     /**
-     *
-     * @param in
-     * @return
+     * @param inch compares inch to yard
      */
-    public double inydComparison(double in) {
-        return in/36;
+    public double inchyardComparison(double inch) {
+        return inch / 36;
     }
 
     /**
-     *
-     * @param yd
-     * @return
+     * @param yard compares yard to inch
      */
-    public double ydinComparison(double yd) {
-        return yd*36;
+    public double yardinchComparison(double yard) {
+        return yard * 36;
     }
 
     /**
-     *
-     * @param yd
-     * @return
+     * @param yard compares yard to feet
      */
-    public double ydftComparison(double yd) {
-        return yd*3;
+    public double yardfeetComparison(double yard) {
+        return yard * 3;
     }
 
-    public double incmComparison(double in) {
-        return in*2.5;
+    /**
+     * @param inch comapares inch to centimeter
+     */
+    public double inchcentimeterComparison(double inch) {
+        return inch * 2.5;
     }
 }
