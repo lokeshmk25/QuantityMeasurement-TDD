@@ -199,5 +199,14 @@ public class QuantityTest {
         boolean compareCheck = inch.compare(cm);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(Length.INCH, 2.0);
+        UnitMeasurementSystem inch2 = new UnitMeasurementSystem(Length.INCH, 2.0);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Length.INCH,4.0);
+        UnitMeasurementSystem actualsum = inch1.addition(inch2,Length.INCH);
+        Assertions.assertEquals(expectedsum,actualsum);
+    }
 }
 

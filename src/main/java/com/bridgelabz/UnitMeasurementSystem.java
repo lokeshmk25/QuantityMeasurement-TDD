@@ -20,6 +20,11 @@ public class UnitMeasurementSystem {
             return Double.compare(this.unit.convertToBaseUnit(this.value),thatUnit.unit.convertToBaseUnit(thatUnit.value)) == 0;
     }
 
+    public UnitMeasurementSystem addition(UnitMeasurementSystem thatUnit, MeasurementUnits requiredUnit){
+        double sum = this.unit.convertToBaseUnit(this.value) + thatUnit.unit.convertToBaseUnit(thatUnit.value);
+        return new UnitMeasurementSystem(requiredUnit,sum);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
