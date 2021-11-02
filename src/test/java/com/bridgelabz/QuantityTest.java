@@ -166,36 +166,37 @@ public class QuantityTest {
 
     @Test
     public void given0centimeterAnd0cetimeterShouldReturnEqual() {
-        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
-        UnitMeasurementSystem cm2 = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
-        Assertions.assertEquals(cm1,cm2);
+        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
+        UnitMeasurementSystem cm2 = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
+        Assertions.assertEquals(cm1, cm2);
     }
 
     @Test
     public void given0cmAnd1cmShouldReturnNotEqual() {
-        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
-        UnitMeasurementSystem cm2 = new UnitMeasurementSystem(Length.CENTIMETER,1.0);
-        Assertions.assertNotEquals(cm1,cm2);
+        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
+        UnitMeasurementSystem cm2 = new UnitMeasurementSystem(Length.CENTIMETER, 1.0);
+        Assertions.assertNotEquals(cm1, cm2);
     }
+
     @Test
     public void given0cmAndNullShouldReturnNotEqual() {
-        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
+        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
         UnitMeasurementSystem cm2 = null;
         Assertions.assertNotEquals(cm1, cm2);
     }
 
     @Test
     public void givencmandcmFromSameReference_WhenEqualShouldReturnTrue() {
-        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
-        UnitMeasurementSystem cm = new UnitMeasurementSystem(Length.CENTIMETER,0.0);
-        boolean actual=cm.equals(cm1);
+        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
+        UnitMeasurementSystem cm = new UnitMeasurementSystem(Length.CENTIMETER, 0.0);
+        boolean actual = cm.equals(cm1);
         Assertions.assertTrue(actual);
     }
 
     @Test
     void given2InchComapreTo5CmShould_ReturnEqual() {
         UnitMeasurementSystem inch = new UnitMeasurementSystem(Length.INCH, 2.0);
-        UnitMeasurementSystem cm = new UnitMeasurementSystem(Length.CENTIMETER,5.0);
+        UnitMeasurementSystem cm = new UnitMeasurementSystem(Length.CENTIMETER, 5.0);
         boolean compareCheck = inch.compare(cm);
         Assertions.assertTrue(compareCheck);
     }
@@ -204,9 +205,18 @@ public class QuantityTest {
     void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
         UnitMeasurementSystem inch1 = new UnitMeasurementSystem(Length.INCH, 2.0);
         UnitMeasurementSystem inch2 = new UnitMeasurementSystem(Length.INCH, 2.0);
-        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Length.INCH,4.0);
-        UnitMeasurementSystem actualsum = inch1.addition(inch2,Length.INCH);
-        Assertions.assertEquals(expectedsum,actualsum);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Length.INCH, 4.0);
+        UnitMeasurementSystem actualsum = inch1.addition(inch2, Length.INCH);
+        Assertions.assertEquals(expectedsum, actualsum);
+    }
+
+    @Test
+    void given1Feetand2Inch_WhenAdded_ShouldReturn14Inches() {
+        UnitMeasurementSystem feet1 = new UnitMeasurementSystem(Length.FEET, 1.0);
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(Length.INCH, 2.0);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Length.INCH, 14.0);
+        UnitMeasurementSystem actualsum = feet1.addition(inch1, Length.INCH);
+        Assertions.assertEquals(expectedsum, actualsum);
     }
 }
 
