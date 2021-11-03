@@ -266,6 +266,14 @@ public class QuantityTest {
     }
 
     @Test
+    void given1GallonAndNull_ShouldReturnNotequal() {
+        UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        UnitMeasurementSystem gallon2 = null;
+        Assertions.assertNotEquals(gallon1, gallon2);
+    }
+
+
+    @Test
     void given0LitreAnd0LitreShouldReturnEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(Volume.LITRES, 0.0);
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(Volume.LITRES, 0.0);
