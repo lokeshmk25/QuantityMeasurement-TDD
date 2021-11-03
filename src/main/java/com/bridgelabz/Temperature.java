@@ -1,16 +1,22 @@
 package com.bridgelabz;
 
+import java.util.function.Function;
+
 public enum Temperature implements MeasurementUnits{
-    FARENHEIT(1.0),CELCIUS(2.12);
+    FARENHEIT(true),CELCIUS(false);
 
-    private double convertionvalue;
+    final Function<Double,Double> degFtoCelcius = (Double degF) -> (degF.doubleValue()-32)*5/9;
+    final Function<Double,Double> degCtoCelcius = (Double degC) -> degC.doubleValue();
 
-    Temperature(double convertionvalue) {
-        this.convertionvalue = convertionvalue;
+    final Function<Double,Double> convertionvalue;
+
+    Temperature(boolean isFarenheit) {
+        if(isFarenheit)this.convertionvalue = degFtoCelcius;
+        else this.convertionvalue=degCtoCelcius;
     }
 
     @Override
     public double convertToBaseUnit(double value) {
-        return value*convertionvalue;
+        return convertionvalue.apply(value);
     }
 }
