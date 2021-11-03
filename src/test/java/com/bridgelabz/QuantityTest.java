@@ -341,10 +341,20 @@ public class QuantityTest {
         boolean compareCheck = litre.compare(ml);
         Assertions.assertTrue(compareCheck);
     }
+
     @Test
     void given1LiterAnd1000ML_whenCompared_ShouldReturnEqual() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 1.0);
         UnitMeasurementSystem ml = new UnitMeasurementSystem(Volume.MILLILITRES, 1000.0);
+        boolean compareCheck = litre.compare(ml);
+        Assertions.assertTrue(compareCheck);
+    }
+
+
+    @Test
+    void given1000MLAnd1Litre_whenCompared_ShouldReturnEqual() {
+        UnitMeasurementSystem ml = new UnitMeasurementSystem(Volume.MILLILITRES, 1000.0);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 1.0);
         boolean compareCheck = litre.compare(ml);
         Assertions.assertTrue(compareCheck);
     }
