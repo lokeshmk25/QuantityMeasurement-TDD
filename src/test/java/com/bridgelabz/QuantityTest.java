@@ -505,5 +505,12 @@ public class QuantityTest {
         UnitMeasurementSystem farenheit2=new UnitMeasurementSystem(Temperature.FARENHEIT,0.0);
         Assertions.assertEquals(farenheit1,farenheit2);
     }
+
+    @Test
+    void given0CelciusAnd0Celcius_ShoudReturnEqual() {
+        UnitMeasurementSystem celcius1=new UnitMeasurementSystem(Temperature.CELCIUS,0.0);
+        UnitMeasurementSystem celcius2=new UnitMeasurementSystem(Temperature.CELCIUS,0.0);
+        Assertions.assertEquals(celcius1,celcius2);
+    }
 }
 
