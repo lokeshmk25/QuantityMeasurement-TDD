@@ -395,5 +395,11 @@ public class QuantityTest {
         UnitMeasurementSystem gram2=null;
         Assertions.assertNotEquals(gram1,gram2);
     }
+    @Test
+    void given0GramAnd0gramFromDiffReference_ShouldReturnNotEqual() {
+        UnitMeasurementSystem gram1=new UnitMeasurementSystem(Weight.GRAM,0.0);
+        UnitMeasurementSystem gram2=new UnitMeasurementSystem(Weight.GRAM,0.0);
+        Assertions.assertNotSame(gram1,gram2);
+    }
 }
 
