@@ -483,5 +483,14 @@ public class QuantityTest {
         boolean compareCheck = tonne.compare(kg);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    void given1TonneAnd1000gm_WhenAdded_ShouldReturn1001kg() {
+        UnitMeasurementSystem tonne = new UnitMeasurementSystem(Weight.TONNE, 1.0);
+        UnitMeasurementSystem gm=new UnitMeasurementSystem(Weight.GRAM,1000.0);
+        UnitMeasurementSystem expectedSum=new UnitMeasurementSystem(Weight.KILOGRAM,1001.0);
+        UnitMeasurementSystem actualsum=tonne.addition(gm,Weight.KILOGRAM);
+        Assertions.assertEquals(expectedSum,actualsum);
+    }
 }
 
