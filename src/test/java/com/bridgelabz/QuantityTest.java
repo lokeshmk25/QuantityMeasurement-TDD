@@ -301,5 +301,13 @@ public class QuantityTest {
         boolean result = litre1 == litre2;
         Assertions.assertFalse(result);
     }
+
+    @Test
+    void given0GallonAnd0Litre_WhenCompared_ShouldReturnTrue() {
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(Volume.GALLON, 0.0);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 0.0);
+        boolean compareCheck = gallon.compare(litre);
+        Assertions.assertTrue(compareCheck);
+    }
 }
 
