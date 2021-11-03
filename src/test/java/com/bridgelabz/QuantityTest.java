@@ -237,5 +237,11 @@ public class QuantityTest {
         Assertions.assertEquals(expectedsum, actualsum);
     }
 
+    @Test
+    void given0GalllonAnd0Gallon_ShouldReturnEqual() {
+        UnitMeasurementSystem gallon1=new UnitMeasurementSystem(Volume.GALLON,0.0);
+        UnitMeasurementSystem gallon2=new UnitMeasurementSystem(Volume.GALLON,0.0);
+        Assertions.assertEquals(gallon1,gallon2);
+    }
 }
 
