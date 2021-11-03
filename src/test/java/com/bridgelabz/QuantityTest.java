@@ -429,5 +429,11 @@ public class QuantityTest {
         UnitMeasurementSystem kg2=null;
         Assertions.assertNotEquals(kg1,kg2);
     }
+    @Test
+    void given0kgAnd0kg_FromDiffReference_ShouldReturnEqual() {
+        UnitMeasurementSystem kg1 = new UnitMeasurementSystem(Weight.KILOGRAM, 0.0);
+        UnitMeasurementSystem kg2 = new UnitMeasurementSystem(Weight.KILOGRAM, 0.0);
+        Assertions.assertNotSame(kg1, kg2);
+    }
 }
 
