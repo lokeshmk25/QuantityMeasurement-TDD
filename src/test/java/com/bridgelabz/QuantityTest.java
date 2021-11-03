@@ -375,5 +375,12 @@ public class QuantityTest {
         UnitMeasurementSystem actualsum = ml.addition(litre, Volume.LITRES);
         Assertions.assertEquals(expectedsum, actualsum);
     }
+
+    @Test
+    void given0GramAnd0GramShouldReturnEqual() {
+        UnitMeasurementSystem gram1=new UnitMeasurementSystem(Weight.GRAM,0.0);
+        UnitMeasurementSystem gram2=new UnitMeasurementSystem(Weight.GRAM,0.0);
+        Assertions.assertEquals(gram1,gram2);
+    }
 }
 
