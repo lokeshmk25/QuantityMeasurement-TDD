@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public enum Weight implements MeasurementUnits {
-    GRAM(0.001),KILOGRAM(1.0),TONNE(0.0);
+    KILOGRAM(1.0),GRAM(0.001),TONNE(1000.0);
 
     private double convertionvalue;
 
