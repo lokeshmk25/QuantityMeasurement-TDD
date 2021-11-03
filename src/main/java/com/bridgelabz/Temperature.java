@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public enum Temperature implements MeasurementUnits{
-    FARENHEIT(0.0),CELCIUS(0.0);
+    FARENHEIT(1.0),CELCIUS(2.12);
 
     private double convertionvalue;
 

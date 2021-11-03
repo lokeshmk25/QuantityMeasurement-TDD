@@ -519,5 +519,13 @@ public class QuantityTest {
         UnitMeasurementSystem celcius2=new UnitMeasurementSystem(Temperature.CELCIUS,1.0);
         Assertions.assertNotEquals(celcius1,celcius2);
     }
+
+    @Test
+    void given212Farenheitand100Celcius_whenCompared_ShouldReturnTrue() {
+        UnitMeasurementSystem farenheit=new UnitMeasurementSystem(Temperature.FARENHEIT,212.0);
+        UnitMeasurementSystem celcius=new UnitMeasurementSystem(Temperature.CELCIUS,100.0);
+        boolean compareCheck=farenheit.compare(celcius);
+        Assertions.assertTrue(compareCheck);
+    }
 }
 
