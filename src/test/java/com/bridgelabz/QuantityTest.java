@@ -408,5 +408,12 @@ public class QuantityTest {
         boolean gram2=true;
         Assertions.assertNotEquals(gram1, true);
     }
+
+    @Test
+    void given0kgAnd0kg_ShouldReturnEqual() {
+        UnitMeasurementSystem kg1=new UnitMeasurementSystem(Weight.KILOGRAM,0.0);
+        UnitMeasurementSystem kg2=new UnitMeasurementSystem(Weight.KILOGRAM,0.0);
+        Assertions.assertEquals(kg1,kg2);
+    }
 }
 
