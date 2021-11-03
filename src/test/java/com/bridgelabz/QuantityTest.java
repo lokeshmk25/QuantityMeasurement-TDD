@@ -366,5 +366,14 @@ public class QuantityTest {
         UnitMeasurementSystem actualsum = gallon.addition(litre, Volume.LITRES);
         Assertions.assertEquals(expectedsum, actualsum);
     }
+
+    @Test
+    void given1Litreand1000ml_WhenAdded_ShouldReturn2Litres() {
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 1.0);
+        UnitMeasurementSystem ml = new UnitMeasurementSystem(Volume.MILLILITRES, 1000.0);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Volume.LITRES, 2.0);
+        UnitMeasurementSystem actualsum = ml.addition(litre, Volume.LITRES);
+        Assertions.assertEquals(expectedsum, actualsum);
+    }
 }
 
