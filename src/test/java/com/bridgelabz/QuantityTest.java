@@ -442,5 +442,12 @@ public class QuantityTest {
         boolean kg2=true;
         Assertions.assertNotEquals(kg1,kg2);
     }
+
+    @Test
+    void given0TonneAnd0Tonne_ShouldReturnEqual() {
+        UnitMeasurementSystem tonne1=new UnitMeasurementSystem(Weight.TONNE,0.0);
+        UnitMeasurementSystem tonne2=new UnitMeasurementSystem(Weight.TONNE,0.0);
+        Assertions.assertEquals(tonne1,tonne2);
+    }
 }
 
