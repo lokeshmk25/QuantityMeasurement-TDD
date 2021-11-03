@@ -271,5 +271,12 @@ public class QuantityTest {
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(Volume.LITRES, 0.0);
         Assertions.assertEquals(litre1, litre2);
     }
+
+    @Test
+    void given0LitreAnd1LitreShouldReturnNotEqual() {
+        UnitMeasurementSystem litre1 = new UnitMeasurementSystem(Volume.LITRES, 0.0);
+        UnitMeasurementSystem litre2 = new UnitMeasurementSystem(Volume.LITRES, 1.0);
+        Assertions.assertNotEquals(litre1, litre2);
+    }
 }
 
