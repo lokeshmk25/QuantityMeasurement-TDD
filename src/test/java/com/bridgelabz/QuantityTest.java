@@ -435,5 +435,12 @@ public class QuantityTest {
         UnitMeasurementSystem kg2 = new UnitMeasurementSystem(Weight.KILOGRAM, 0.0);
         Assertions.assertNotSame(kg1, kg2);
     }
+
+    @Test
+    void givenkgAndDiffType_ShouldReturnNotEqual() {
+        UnitMeasurementSystem kg1 = new UnitMeasurementSystem(Weight.KILOGRAM, 0.0);
+        boolean kg2=true;
+        Assertions.assertNotEquals(kg1,kg2);
+    }
 }
 
