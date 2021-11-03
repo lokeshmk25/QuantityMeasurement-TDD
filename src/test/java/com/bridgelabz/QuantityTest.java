@@ -227,5 +227,15 @@ public class QuantityTest {
         UnitMeasurementSystem actualsum = feet1.addition(feet2, Length.INCH);
         Assertions.assertEquals(expectedsum, actualsum);
     }
+
+    @Test
+    void given2InchAnd2point5CM_WhenAdded_ShouldReturn3Inches() {
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(Length.INCH, 2.0);
+        UnitMeasurementSystem cm1 = new UnitMeasurementSystem(Length.CENTIMETER, 2.5);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Length.INCH, 3.0);
+        UnitMeasurementSystem actualsum = inch1.addition(cm1, Length.INCH);
+        Assertions.assertEquals(expectedsum, actualsum);
+    }
+
 }
 
