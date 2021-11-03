@@ -350,13 +350,21 @@ public class QuantityTest {
         Assertions.assertTrue(compareCheck);
     }
 
-
     @Test
     void given1000MLAnd1Litre_whenCompared_ShouldReturnEqual() {
         UnitMeasurementSystem ml = new UnitMeasurementSystem(Volume.MILLILITRES, 1000.0);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 1.0);
         boolean compareCheck = litre.compare(ml);
         Assertions.assertTrue(compareCheck);
+    }
+
+    @Test
+    void given1GallonAnd3point78Litres_WhenAdded_ShouldReturn7point56Litres() {
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 3.78);
+        UnitMeasurementSystem expectedsum = new UnitMeasurementSystem(Volume.LITRES, 7.56);
+        UnitMeasurementSystem actualsum = gallon.addition(litre, Volume.LITRES);
+        Assertions.assertEquals(expectedsum, actualsum);
     }
 }
 
