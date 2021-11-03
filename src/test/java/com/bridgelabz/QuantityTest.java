@@ -467,5 +467,13 @@ public class QuantityTest {
         UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(Weight.TONNE, 0.0);
         Assertions.assertNotSame(tonne1, tonne2);
     }
+
+    @Test
+    void given1kgAnd1000grams_Whencompared_ShouldReturnTrue() {
+        UnitMeasurementSystem kg=new UnitMeasurementSystem(Weight.KILOGRAM,(1.0));
+        UnitMeasurementSystem gram=new UnitMeasurementSystem(Weight.GRAM,(1000.0));
+        boolean compareCheck = kg.compare(gram);
+        Assertions.assertTrue(compareCheck);
+    }
 }
 
