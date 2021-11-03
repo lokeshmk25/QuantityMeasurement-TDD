@@ -461,5 +461,11 @@ public class QuantityTest {
         UnitMeasurementSystem tonne2 = null;
         Assertions.assertNotEquals(tonne1, tonne2);
     }
+    @Test
+    void given0TonneAnd0Tonne_FromDiffReference_ShouldReturnNotEqual() {
+        UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(Weight.TONNE, 0.0);
+        UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(Weight.TONNE, 0.0);
+        Assertions.assertNotSame(tonne1, tonne2);
+    }
 }
 
