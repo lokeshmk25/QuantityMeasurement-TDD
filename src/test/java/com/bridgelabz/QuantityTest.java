@@ -257,5 +257,12 @@ public class QuantityTest {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(Length.FEET, 1.0);
         Assertions.assertNotEquals(gallon1, feet1);
     }
+
+    @Test
+    void given1GallonAnd1GallonFromDiffReference_ShouldReturnNotequal() {
+        UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        Assertions.assertNotSame(gallon1, gallon2);
+    }
 }
 
