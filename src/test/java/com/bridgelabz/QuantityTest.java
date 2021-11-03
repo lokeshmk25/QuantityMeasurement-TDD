@@ -239,16 +239,23 @@ public class QuantityTest {
 
     @Test
     void given0GalllonAnd0Gallon_ShouldReturnEqual() {
-        UnitMeasurementSystem gallon1=new UnitMeasurementSystem(Volume.GALLON,0.0);
-        UnitMeasurementSystem gallon2=new UnitMeasurementSystem(Volume.GALLON,0.0);
-        Assertions.assertEquals(gallon1,gallon2);
+        UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(Volume.GALLON, 0.0);
+        UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(Volume.GALLON, 0.0);
+        Assertions.assertEquals(gallon1, gallon2);
     }
 
     @Test
     void given0GalllonAnd1Gallon_ShouldReturnEqual() {
-        UnitMeasurementSystem gallon1=new UnitMeasurementSystem(Volume.GALLON,0.0);
-        UnitMeasurementSystem gallon2=new UnitMeasurementSystem(Volume.GALLON,1.0);
-        Assertions.assertNotEquals(gallon1,gallon2);
+        UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(Volume.GALLON, 0.0);
+        UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        Assertions.assertNotEquals(gallon1, gallon2);
+    }
+
+    @Test
+    void given1GallonAnd1FeetFromDiffType_ShouldReturnNotequal() {
+        UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(Volume.GALLON, 1.0);
+        UnitMeasurementSystem feet1 = new UnitMeasurementSystem(Length.FEET, 1.0);
+        Assertions.assertNotEquals(gallon1, feet1);
     }
 }
 
