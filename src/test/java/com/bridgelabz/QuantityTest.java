@@ -309,5 +309,14 @@ public class QuantityTest {
         boolean compareCheck = gallon.compare(litre);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    void given0GallonAnd1Litre_WhenCompared_ShouldReturnNotEqual() {
+        UnitMeasurementSystem gallon = new UnitMeasurementSystem(Volume.GALLON, 0.0);
+        UnitMeasurementSystem litre = new UnitMeasurementSystem(Volume.LITRES, 1.0);
+        boolean compareCheck = gallon.compare(litre);
+        Assertions.assertFalse(compareCheck);
+    }
+
 }
 
