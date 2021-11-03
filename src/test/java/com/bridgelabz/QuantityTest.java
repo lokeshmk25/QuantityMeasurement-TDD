@@ -291,7 +291,7 @@ public class QuantityTest {
     void given1LitreAndDiffTypeShouldReturnNotEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(Volume.LITRES, 0.0);
         boolean litre2 = true;
-        Assertions.assertNotEquals(litre1, litre2);
+        Assertions.assertNotEquals(litre1, true);
     }
 
     @Test
@@ -400,6 +400,13 @@ public class QuantityTest {
         UnitMeasurementSystem gram1=new UnitMeasurementSystem(Weight.GRAM,0.0);
         UnitMeasurementSystem gram2=new UnitMeasurementSystem(Weight.GRAM,0.0);
         Assertions.assertNotSame(gram1,gram2);
+    }
+
+    @Test
+    void given0GramanDiffTypeShouldReturnNotEqual() {
+        UnitMeasurementSystem gram1=new UnitMeasurementSystem(Weight.GRAM,0.0);
+        boolean gram2=true;
+        Assertions.assertNotEquals(gram1, true);
     }
 }
 
