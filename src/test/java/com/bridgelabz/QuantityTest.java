@@ -485,12 +485,19 @@ public class QuantityTest {
     }
 
     @Test
-    void given1TonneAnd1000gm_WhenAdded_ShouldReturn1001kg() {
+    void given1TonneAnd1000gm_WhenAdded_ShouldReturn1001kg(){
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(Weight.TONNE, 1.0);
         UnitMeasurementSystem gm=new UnitMeasurementSystem(Weight.GRAM,1000.0);
         UnitMeasurementSystem expectedSum=new UnitMeasurementSystem(Weight.KILOGRAM,1001.0);
         UnitMeasurementSystem actualsum=tonne.addition(gm,Weight.KILOGRAM);
         Assertions.assertEquals(expectedSum,actualsum);
+    }
+
+    @Test
+    void given0FarenheitAnd1FarenheitShouldReturnNotEqual() {
+        UnitMeasurementSystem farenheit1=new UnitMeasurementSystem(Temperature.FARENHEIT,0.0);
+        UnitMeasurementSystem farenheit2=new UnitMeasurementSystem(Temperature.FARENHEIT,1.0);
+        Assertions.assertNotEquals(farenheit1,farenheit2);
     }
 }
 
